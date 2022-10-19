@@ -43,7 +43,7 @@ public class SMSAuthenticationProvider implements AuthenticationProvider {
         return smsVerificationAuthenticationToken;
     }
 
-    //
+    // 判断是否支持此登录方式
     @Override
     public boolean supports(Class<?> authentication) {
         return (SMSVerificationAuthenticationToken.class.isAssignableFrom(authentication));
