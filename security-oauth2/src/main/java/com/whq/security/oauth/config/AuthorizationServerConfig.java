@@ -62,7 +62,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 // 令牌有效时间，单位秒
                 .accessTokenValiditySeconds(7200)
                 // 支持短信验证码、账号密码模式登录
-                .authorizedGrantTypes("SMSVerification", "pwd")
+                .authorizedGrantTypes("refresh_token", "SMSVerification", "pwd")
                 // 权限有哪些,如果这两配置了该参数，客户端发请求可以不带参数，使用配置的参数
                 .scopes("all", "read", "write");
     }
